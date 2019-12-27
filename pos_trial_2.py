@@ -10,6 +10,7 @@ from yellowbrick.text.base import TextVisualizer
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 import re
+import os
 
 
 app = Flask(__name__)
@@ -54,5 +55,5 @@ def adj():
 
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()                                                                                                                                           
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)                                                                                                                                         
