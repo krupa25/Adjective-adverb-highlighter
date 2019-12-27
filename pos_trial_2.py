@@ -26,7 +26,7 @@ def my_form():
 #     return processed_text
 
 
-@app.route('/', methods=['POST'])
+@app.route('/submit', methods=['POST'])
 
 def adj():
     text = request.form['text']
