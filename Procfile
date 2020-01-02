@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn pos_trial_2:app
